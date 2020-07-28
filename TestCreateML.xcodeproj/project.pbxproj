@@ -14,6 +14,8 @@
 		8EE740C724D0C3F10086169E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EE740C624D0C3F10086169E /* Assets.xcassets */; };
 		8EE740CA24D0C3F10086169E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EE740C924D0C3F10086169E /* Preview Assets.xcassets */; };
 		8EE740CD24D0C3F10086169E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EE740CB24D0C3F10086169E /* LaunchScreen.storyboard */; };
+		8EE740D624D0C4CE0086169E /* BackgroundStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE740D524D0C4CE0086169E /* BackgroundStyle.swift */; };
+		8EE740D824D0C62E0086169E /* SleepCalculator.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8EE740D724D0C62E0086169E /* SleepCalculator.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		8EE740C924D0C3F10086169E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8EE740CC24D0C3F10086169E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8EE740CE24D0C3F10086169E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EE740D524D0C4CE0086169E /* BackgroundStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundStyle.swift; sourceTree = "<group>"; };
+		8EE740D724D0C62E0086169E /* SleepCalculator.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SleepCalculator.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		8EE740BC24D0C3EF0086169E /* TestCreateML */ = {
 			isa = PBXGroup;
 			children = (
+				8EE740D424D0C49F0086169E /* Styles */,
 				8EE740BD24D0C3EF0086169E /* AppDelegate.swift */,
 				8EE740BF24D0C3EF0086169E /* SceneDelegate.swift */,
 				8EE740C424D0C3EF0086169E /* ContentView.swift */,
@@ -65,6 +70,7 @@
 				8EE740CB24D0C3F10086169E /* LaunchScreen.storyboard */,
 				8EE740CE24D0C3F10086169E /* Info.plist */,
 				8EE740C124D0C3EF0086169E /* TestCreateML.xcdatamodeld */,
+				8EE740D724D0C62E0086169E /* SleepCalculator.mlmodel */,
 				8EE740C824D0C3F10086169E /* Preview Content */,
 			);
 			path = TestCreateML;
@@ -76,6 +82,14 @@
 				8EE740C924D0C3F10086169E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8EE740D424D0C49F0086169E /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				8EE740D524D0C4CE0086169E /* BackgroundStyle.swift */,
+			);
+			path = Styles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,9 +163,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EE740D624D0C4CE0086169E /* BackgroundStyle.swift in Sources */,
 				8EE740BE24D0C3EF0086169E /* AppDelegate.swift in Sources */,
 				8EE740C024D0C3EF0086169E /* SceneDelegate.swift in Sources */,
 				8EE740C524D0C3EF0086169E /* ContentView.swift in Sources */,
+				8EE740D824D0C62E0086169E /* SleepCalculator.mlmodel in Sources */,
 				8EE740C324D0C3EF0086169E /* TestCreateML.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
