@@ -31,7 +31,7 @@ struct ContentView: View {
     @State private var coffeeAmount = 1
     
     var sleepTime: String {
-        let st = calculateBedtime()
+        let st = calculateStartTime()
         let dateFormatter = DateFormatter()
         dateFormatter.timeStyle = .short
         return  "\(dateFormatter.string(from: st))"
@@ -48,7 +48,7 @@ struct ContentView: View {
         NavigationView{
             ScrollView{
                 VStack(alignment: .leading, spacing: 0) {
-                    Text("When do you want to wake up")
+                    Text("When do you want to start")
                         .font(.headline)
                     
                     DatePicker("Please enter a time", selection: $wakeUp, displayedComponents: .hourAndMinute)
@@ -59,7 +59,7 @@ struct ContentView: View {
                 
                 
                 VStack(alignment: .leading, spacing: 0) {
-                    Text("Desired amount of sleep")
+                    Text("Estimated time required")
                         .font(.headline)
                     
                     Stepper(value: $sleepAmount, in: 4...12, step: 0.25) {
@@ -70,7 +70,7 @@ struct ContentView: View {
                 
                 
                 VStack(alignment: .leading, spacing: 0) {
-                    Text("Daily coffee intake")
+                    Text("Coffee Intake")
                         .font(.headline)
                     
                     Stepper(value: $coffeeAmount, in: 1...20){
@@ -91,7 +91,7 @@ struct ContentView: View {
                 }.addBackgroundStyle()
                 
                 VStack(alignment: .center, spacing: 0) {
-                    Text("Your should sleep at")
+                    Text("Your should start at")
                         .font(.headline)
                     Text("\(sleepTime)")
                         .font(.largeTitle)
@@ -101,7 +101,7 @@ struct ContentView: View {
                 .padding(.bottom)
             }
                 
-            .navigationBarTitle("Better Rest")
+            .navigationBarTitle("Scheduler")
         }
     }
 
@@ -120,6 +120,24 @@ struct ContentView: View {
             return Date()
         }
     
+    }
+    
+    func calculateStartTime() -> Date {
+       
+         let model = Scheduler()
+
+             let dateComponents = Calendar.current.dateComponents([.hour,.minute], from: wakeUp)
+             let hoursInSeconds = (dateComponents.hour ?? 0) * 60 * 60
+             let minutesInSeconds = (dateComponents.minute ?? 0) * 60
+
+             do{
+                 let prediction = try model.prediction(deadline: Double(hoursInSeconds + minutesInSeconds), noOfHoursRequired: Double(sleepAmount), coffee: Double(coffeeAmount))
+                let sleepTime = wakeUp - prediction.startTime
+                 return sleepTime
+             }catch{
+                 return Date()
+             }
+         
     }
 }
 
