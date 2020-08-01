@@ -16,7 +16,6 @@
 		8EE740CA24D0C3F10086169E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EE740C924D0C3F10086169E /* Preview Assets.xcassets */; };
 		8EE740CD24D0C3F10086169E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EE740CB24D0C3F10086169E /* LaunchScreen.storyboard */; };
 		8EE740D624D0C4CE0086169E /* BackgroundStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE740D524D0C4CE0086169E /* BackgroundStyle.swift */; };
-		8EE740D824D0C62E0086169E /* SleepCalculator.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8EE740D724D0C62E0086169E /* SleepCalculator.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +30,6 @@
 		8EE740CC24D0C3F10086169E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8EE740CE24D0C3F10086169E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EE740D524D0C4CE0086169E /* BackgroundStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundStyle.swift; sourceTree = "<group>"; };
-		8EE740D724D0C62E0086169E /* SleepCalculator.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SleepCalculator.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +70,6 @@
 				8EE740CB24D0C3F10086169E /* LaunchScreen.storyboard */,
 				8EE740CE24D0C3F10086169E /* Info.plist */,
 				8EE740C124D0C3EF0086169E /* TestCreateML.xcdatamodeld */,
-				8EE740D724D0C62E0086169E /* SleepCalculator.mlmodel */,
 				8E450E8324D4FC1F00AAA556 /* Scheduler.mlmodel */,
 				8EE740C824D0C3F10086169E /* Preview Content */,
 			);
@@ -171,7 +168,6 @@
 				8EE740BE24D0C3EF0086169E /* AppDelegate.swift in Sources */,
 				8EE740C024D0C3EF0086169E /* SceneDelegate.swift in Sources */,
 				8EE740C524D0C3EF0086169E /* ContentView.swift in Sources */,
-				8EE740D824D0C62E0086169E /* SleepCalculator.mlmodel in Sources */,
 				8EE740C324D0C3EF0086169E /* TestCreateML.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
