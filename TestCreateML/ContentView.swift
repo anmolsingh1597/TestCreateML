@@ -47,31 +47,24 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             ScrollView{
-                VStack(alignment: .leading, spacing: 0) {
-                    Text("When do you want to start")
-                        .font(.headline)
-                    
-                    DatePicker("Please enter a time", selection: $wakeUp, displayedComponents: .hourAndMinute)
-                        //to hide the label
-                        .labelsHidden()
-                        .datePickerStyle(WheelDatePickerStyle())
-                }.addBackgroundStyle()
-                
+               
                 
                 VStack(alignment: .leading, spacing: 0) {
                     Text("Estimated time required")
                         .font(.headline)
+                        .foregroundColor(Color(UIColor.white))
                     
                     Stepper(value: $sleepAmount, in: 4...12, step: 0.25) {
                         Text("\(sleepAmount, specifier: "%g") hours")
                             .font(.subheadline)
-                    }
-                }.addBackgroundStyle()
+                    }.colorInvert().colorMultiply(Color.white)
+                }.addPinkBackgroundStyle()
                 
                 
                 VStack(alignment: .leading, spacing: 0) {
                     Text("Coffee Intake")
                         .font(.headline)
+                        .foregroundColor(Color(UIColor.white))
                     
                     Stepper(value: $coffeeAmount, in: 1...20){
                         if coffeeAmount == 1{
@@ -87,20 +80,33 @@ struct ContentView: View {
                             Text("\(coffeeAmount) ☕️☕️☕️☕️")
                             .font(.largeTitle)
                         }
-                    }
-                }.addBackgroundStyle()
+                    }.colorInvert().colorMultiply(Color.white)
+                }.addBlueBackgroundStyle()
+                VStack(alignment: .leading, spacing: 0) {
+                                   Text("When do you want to start")
+                                       .font(.headline)
+                                       .foregroundColor(Color(UIColor.white))
+                                   
+                    DatePicker("Please enter a time", selection: $wakeUp, displayedComponents: .hourAndMinute)
+                                //to hide the label
+                                .labelsHidden()
+                                .datePickerStyle(WheelDatePickerStyle())
+                                .colorInvert().colorMultiply(Color.white)
+                               }.addRedBackgroundStyle()
+                               
                 
                 VStack(alignment: .center, spacing: 0) {
                     Text("Your should start at")
                         .font(.headline)
+                        .foregroundColor(Color(UIColor.white))
                     Text("\(sleepTime)")
                         .font(.largeTitle)
+                        .foregroundColor(Color(UIColor.white))
                 }
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-                .addBackgroundStyle()
+                .addGreenBackgroundStyle()
                 .padding(.bottom)
             }
-                
             .navigationBarTitle("Scheduler")
         }
     }
